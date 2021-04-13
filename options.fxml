@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application_group.optionsController">
+   <top>
+      <AnchorPane prefHeight="85.0" prefWidth="350.0" style="-fx-background-color: #3366cc;" BorderPane.alignment="CENTER">
+         <children>
+            <StackPane layoutX="23.0" layoutY="22.0" prefHeight="41.0" prefWidth="40.0">
+               <children>
+                  <ImageView fx:id="menu" fitHeight="34.0" fitWidth="33.0" onMouseClicked="#mainMenu" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../2020%20Spring%20SEMESTER/Apps/left.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </StackPane>
+            <Text fill="WHITE" layoutX="137.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Options" textAlignment="CENTER" wrappingWidth="125.427734375">
+               <font>
+                  <Font name="Cambria Bold" size="20.0" />
+               </font>
+            </Text>
+            <Button fx:id="signOut" layoutX="314.0" layoutY="27.0" mnemonicParsing="false" onAction="#signOut" style="-fx-background-color: grey;" text="Sign out" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </top>
+   <center>
+      <AnchorPane fx:id="a" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+         <children>
+            <VBox fx:id="vb" layoutX="14.0" layoutY="67.0" prefHeight="16.0" prefWidth="379.0">
+               <children>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <TextField fx:id="categoryField" prefHeight="28.0" prefWidth="210.0" promptText="Create a category name">
+                           <HBox.margin>
+                              <Insets right="5.0" />
+                           </HBox.margin>
+                        </TextField>
+                        <Button mnemonicParsing="false" onAction="#category" style="-fx-background-color: #3366cc;" text="Create new Category " textFill="#f4f4f4">
+                           <font>
+                              <Font name="Cambria Bold" size="14.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children></VBox>
+            <Text fx:id="userText" layoutX="21.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+            <Text fx:id="confirmation" fill="#00e40b" layoutX="82.0" layoutY="142.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="211.66668701171875" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane prefHeight="600.0" prefWidth="400.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application_group.signInController">
+   <center>
+      <AnchorPane prefHeight="348.0" prefWidth="375.0" BorderPane.alignment="CENTER">
+         <children>
+            <TextField fx:id="uText" layoutX="13.0" layoutY="88.0" prefHeight="30.0" prefWidth="350.0" promptText="Username">
+               <font>
+                  <Font name="Calibri" size="15.0" />
+               </font>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding></TextField>
+            <TextField fx:id="pwText" layoutX="13.0" layoutY="126.0" prefHeight="30.0" prefWidth="350.0" promptText="Password">
+               <font>
+                  <Font name="Calibri" size="15.0" />
+               </font></TextField>
+            <Button fx:id="signInBtn" layoutX="35.0" layoutY="175.0" mnemonicParsing="false" onAction="#handleButtonAction" onMouseClicked="#handleButtonAction" prefHeight="25.0" prefWidth="300.0" style="-fx-background-color: #00b300; -fx-border-radius: 100px;" text="Sign In" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font></Button>
+            <Hyperlink fx:id="signUpLink" layoutX="158.0" layoutY="238.0" onAction="#signUpInstead" text="Sign Up">
+               <font>
+                  <Font size="14.0" />
+               </font></Hyperlink>
+            <Text layoutX="146.0" layoutY="234.0" strokeType="OUTSIDE" strokeWidth="0.0" text="No Account?" wrappingWidth="82.876220703125">
+               <font>
+                  <Font size="14.0" />
+               </font></Text>
+            <Label layoutX="118.0" layoutY="6.0" text="Task Manager " textFill="#0a0aaa">
+               <font>
+                  <Font name="Cambria" size="25.0" />
+               </font>
+            </Label>
+            <Label layoutX="165.0" layoutY="45.0" text="Log In" textAlignment="CENTER">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <HBox fx:id="hSign" layoutX="21.0" layoutY="307.0" prefHeight="38.0" prefWidth="347.0">
+               <children>
+                  <Text fx:id="errorTxt" strokeType="OUTSIDE" strokeWidth="0.0" />
+                  <Label fx:id="e" wrapText="true" />
+               </children>
+            </HBox>
+         </children>
+         <BorderPane.margin>
+            <Insets left="15.0" right="15.0" top="75.0" />
+         </BorderPane.margin>
+      </AnchorPane>
+   </center>
+</BorderPane>
